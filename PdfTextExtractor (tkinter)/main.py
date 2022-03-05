@@ -26,7 +26,7 @@ instructions.grid(columnspan=3, column=0, row=1)
 # Open pdf file on button click
 def open_file():
     browse_txt.set('Loading...')
-    file = askopenfile(parent=root, mode='rb', title='Choose a file', filetyp=[('Pdf file', '*.pdf')])
+    file = askopenfile(parent=root, mode='rb', title='Choose a file', filetypes=[('Pdf file', '*.pdf')])
     if file:
         read_pdf = PyPDF2.PdfFileReader(file)
         page = read_pdf.getPage(0)
